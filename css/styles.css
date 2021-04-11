@@ -7,6 +7,13 @@
   --color-headings: #1b0760;
   --color-body: #918ca4;
 }
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -161,4 +168,64 @@ a {
   display: inline-flex;
   justify-content: center;
   align-items: center;
+}
+
+/* Buttons */
+.btn {
+  border-radius: 50px;
+  border: 0;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.5;
+  padding: 2rem 3rem;
+  text-transform: uppercase;
+  white-space: nowrap;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.btn--primary {
+  background: var(--color-primary);
+  color: #f3f9fa;
+}
+.btn--primary:hover {
+  /* background: lighten(primary, 10%);  <-- how the code would look like in SASS, but I haven't used it yet*/
+  background: #6cacff;
+}
+.btn--secondary {
+  background: var(--color-secondary);
+  color: #f3f9fa;
+}
+.btn--secondary:hover {
+  background: #6ce5fa;
+}
+.btn--accent {
+  background: var(--color-accent);
+  color: #f3f9fa;
+}
+.btn--accent:hover {
+  background: #fc6038;
+}
+
+.btn--block {
+  width: 100%;
+  display: inline-block;
+}
+
+.btn--outline {
+  background: #fff;
+  color: var(--color-headings);
+  border: 2px solid var(--color-headings);
+}
+.btn--outline:hover {
+  background: var(--color-headings);
+  color: #fff;
+}
+
+@media screen and (min-width: 1024px) {
+  .btn {
+    font-size: 1.5rem;
+  }
 }
