@@ -769,3 +769,33 @@ a {
   max-width: 500px;
   margin: 0 auto;
 }
+
+/* Features Block */
+
+.feature__heading {
+  margin-top: 1rem;
+}
+
+.feature {
+  gap: 4rem 2rem;
+  margin: 12rem 0;
+}
+
+.feature:first-of-type {
+  margin-top: 6rem;
+}
+
+.feature-picture > img {
+  width: 100%;
+}
+
+.features-block .grid .grid--1x2 {
+  margin: 3rem;
+  gap: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .feature:nth-of-type(even) .feature__content {
+    order: 2;
+  }
+}
